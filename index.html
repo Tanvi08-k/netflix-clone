@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+
+    <div class="hero">
+
+        <nav>
+
+            <img src="images/logo.png" class="logo" alt="Netflix Logo">
+
+            <div class="nav-right">
+
+             <div class="language-btn">
+              <i class="fa-solid fa-language"></i>
+
+              <select>
+               <option>English</option>
+               <option>हिन्दी</option>
+              </select>
+             </div>
+
+             <button>Sign In</button>
+
+            </div>
+        </nav>
+
+        <div class="hero-content">
+
+            <h1>Unlimited movies, TV shows
+                <br>
+                 and more
+            </h1>
+
+            <h3>Starts at ₹149. Cancel anytime.</h3>
+
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+
+            <div class="email-signup">
+
+                <input type="email" placeholder="Email address">
+
+                <button>
+                    Get Started
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+    
+    <div class="curve"></div>
+
+    <main>
+
+   <!-- Trending Section -->
+
+<section class="trending">
+
+    <h2>Trending Now</h2>
+
+    <div class="trending-wrapper">
+
+        <button class="scroll-btn left" onclick="scrollLeftMovies()">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="trending-row" id="trendingRow">
+
+            <div class="movie-card">
+                <span class="rank">1</span>
+                <img src="images/trending1.webp.jpg" alt="">
+            </div>
+
+            <div class="movie-card">
+                <span class="rank">2</span>
+                <img src="images/trending2.webp.jpg" alt="">
+            </div>
+
+            <div class="movie-card">
+                <span class="rank">3</span>
+                <img src="images/trending3.webp.jpg" alt="">
+            </div>
+
+            <div class="movie-card">
+                <span class="rank">4</span>
+                <img src="images/trending4.webp.jpg" alt="">
+            </div>
+
+            <div class="movie-card">
+                <span class="rank">5</span>
+                <img src="images/trending5.webp.jpg" alt="">
+            </div>
+
+            <div class="movie-card">
+                <span class="rank">6</span>
+                <img src="images/trending6.webp.jpg" alt="">
+            </div>
+
+        </div>
+
+        <button class="scroll-btn right" onclick="scrollRightMovies()">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+</section>
+    
+
+<section class="reasons">
+
+    <h2>More Reasons to Join</h2>
+
+    <div class="reason-container">
+
+        <div class="reason-box">
+            <h3>Enjoy on your TV</h3>
+            <p>Watch on Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+            <i class="fa-solid fa-tv reason-icon"></i>
+        </div>
+
+        <div class="reason-box">
+            <h3>Download your shows to watch offline</h3>
+            <p>Save your favourites easily and always have something to watch.</p>
+            <i class="fa-solid fa-circle-down reason-icon"></i>
+        </div>
+
+        <div class="reason-box">
+            <h3>Watch everywhere</h3>
+            <p>Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
+            <i class="fa-solid fa-binoculars reason-icon"></i>
+        </div>
+
+        <div class="reason-box">
+            <h3>Create profiles for kids</h3>
+            <p>Send kids on adventures with their favourite characters in a space made just for them.</p>
+            <i class="fa-solid fa-face-smile reason-icon"></i>
+        </div>
+
+    </div>
+
+</section>
+    <!-- FAQ -->
+
+    <section class="faq">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            <span>What is Netflix?</span>
+            <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            <span>How much does Netflix cost?</span>
+            <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device for one fixed monthly fee.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            <span>Where can I watch?</span>
+            <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web or on any internet-connected device.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            <span>How do I cancel?</span>
+            <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>Netflix is flexible. There are no annoying contracts and no cancellation fees. You can cancel your account online anytime.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            <span>What can I watch on Netflix?</span>
+            <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning originals and more.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            <span>Is Netflix good for kids?</span>
+            <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies.</p>
+        </div>
+    </div>
+
+</section>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+
+        <p class="question">
+            Questions? Call <a href="#">000-800-919-1694</a>
+        </p>
+
+        <div class="footer-links">
+
+            <a href="#">FAQ</a>
+            <a href="#">Help Centre</a>
+            <a href="#">Account</a>
+            <a href="#">Media Centre</a>
+
+            <a href="#">Investor Relations</a>
+            <a href="#">Jobs</a>
+            <a href="#">Ways to Watch</a>
+            <a href="#">Terms of Use</a>
+
+            <a href="#">Privacy</a>
+            <a href="#">Cookie Preferences</a>
+            <a href="#">Corporate Information</a>
+            <a href="#">Contact Us</a>
+
+            <a href="#">Speed Test</a>
+            <a href="#">Legal Notices</a>
+            <a href="#">Only on Netflix</a>
+
+        </div>
+
+        <div class="language-btn footer-lang">
+            <i class="fa-solid fa-language"></i>
+
+            <select>
+                <option>English</option>
+                <option>हिन्दी</option>
+            </select>
+        </div>
+
+        <p class="country">Netflix India</p>
+
+    </footer>
+     
+     <script>
+
+        const row = document.getElementById("trendingRow");
+
+        function scrollLeftMovies(){
+            row.scrollBy({
+                left:-600,
+                behavior:"smooth"
+            });
+        }
+
+        function scrollRightMovies(){
+            row.scrollBy({
+                left:600,
+                behavior:"smooth"
+            });
+        }
+
+     </script>
+
+     <script>
+
+        const faqs = document.querySelectorAll(".faq-item");
+
+        faqs.forEach(item=>{
+
+            const btn = item.querySelector(".faq-question");
+
+            btn.onclick=()=>{
+
+                faqs.forEach(other=>{
+
+                    if(other!==item){
+
+                        other.querySelector(".faq-answer").style.maxHeight=null;
+
+                        other.querySelector(".icon").innerHTML="+";
+
+                    }
+
+                });
+
+                const answer=item.querySelector(".faq-answer");
+
+                const icon=item.querySelector(".icon");
+
+                if(answer.style.maxHeight){
+
+                    answer.style.maxHeight=null;
+                    icon.innerHTML="+";
+
+                }else{
+
+                    answer.style.maxHeight=answer.scrollHeight+"px";
+                    icon.innerHTML="×";
+
+                }
+
+            }
+
+     });
+
+     </script>
+</body>
+</html>

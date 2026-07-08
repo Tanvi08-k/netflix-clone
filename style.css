@@ -1,0 +1,564 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    background:#000;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+.hero{
+    width:100%;
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+    url("images/hero.jpg");
+    background-size:cover;
+    background-position:center;
+    position:relative;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:24px 8%;
+}
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+.logo{
+    width:145px;
+}
+
+.language-btn{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 12px;
+    border:1px solid rgba(255,255,255,.5);
+    border-radius:4px;
+    background:rgba(0,0,0,.4);
+}
+
+.language-btn i{
+    color:white;
+    font-size:16px;
+}
+
+.language-btn select{
+    background:transparent;
+    border:none;
+    outline:none;
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+}
+
+.language-btn option{
+    color:black;
+}
+
+nav button{
+    background:#e50914;
+    color:white;
+    border:none;
+    height: 32px;
+    padding:0 16px;
+    font-weight:600;
+    border-radius:4px;
+    cursor:pointer;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.hero-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:100%;
+    max-width:950px;
+    padding:0 20px;
+    text-align:center;
+}
+
+.hero-content h1{
+    font-size:48px;
+    font-weight:900;
+    line-height:1.15;
+    max-width:700px;
+    margin:0 auto 18px;
+}
+
+.hero-content h3{
+    font-size:24px;
+    font-weight:500;
+    margin-bottom:22px;
+}
+
+.hero-content p{
+    font-size:16px;
+    line-height:1.5;
+    margin-bottom:18px;
+}
+
+
+  /* Netflix Official Style Divider */
+
+
+.curve{
+    position:relative;
+    width:100%;
+    height:38px;
+    margin-top:-18px;
+    overflow:hidden;
+    z-index:20;
+    background:#000;
+}
+
+.curve::before{
+    content:"";
+    position:absolute;
+    left:-8%;
+    top:8px;
+
+    width:116%;
+    height:85px;
+
+    border-top:3px solid #e50914;
+    border-radius:50%;
+
+    background:transparent;
+
+    box-shadow:
+        0 3px 6px rgba(229,9,20,.35),    /* red glow below */
+        0 8px 20px rgba(0,98,255,.75),   /* blue reflection */
+        0 25px 45px rgba(0,0,0,.9);      /* dark shadow */
+}
+
+/* Trending Section */
+
+.trending{
+    width:82%;
+    max-width:1280px;
+    margin:10px auto 80px;
+}
+
+.trending h2{
+    font-size:25px;
+    font-weight:700;
+    margin-bottom:24px;
+}
+
+.trending-row{
+    display:flex;
+    gap:18px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scroll-behavior:smooth;
+    scrollbar-width:none;
+
+    padding:15px 0 20px 35px;
+}
+
+.trending-row::-webkit-scrollbar{
+    display:none;}
+
+.movie-card{
+    position:relative;
+    min-width:180px;
+    flex-shrink:0;
+    transition:.35s ease;
+}
+
+.movie-card:hover{
+    transform:translateY(-8px) scale(1.05);
+}
+
+.movie-card img{
+    width:170px;
+    height:235px;
+    object-fit:cover;
+    border-radius:10px;
+    display:block;
+    position:relative;
+}
+.rank{
+    position:absolute;
+    left:-18px;
+    bottom:+15px;
+
+    font-size:80px;
+    font-weight:900;
+    line-height:1;
+
+    color:#000;
+    -webkit-text-stroke:2px #fff;
+
+    z-index:5;
+}
+.movie-card img{
+    transition:.35s;
+}
+
+.movie-card:hover img{
+    box-shadow:0 18px 35px rgba(0,0,0,.55);
+}
+
+.trending-wrapper{
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+
+.scroll-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+
+    width:24px;
+    height:120px;
+
+    border:none;
+    border-radius:8px;
+
+    background:rgba(42,42,42,.75);
+    color:#fff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    cursor:pointer;
+    z-index:10;
+
+    transition:0.3s;
+}
+
+.scroll-btn:hover{
+    background:rgba(60,60,60,.95);
+}
+
+.left{
+    left:-40px;
+}
+
+.right{
+    right:-40px;
+}
+
+
+.email-signup{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    margin-top:20px;
+}
+
+.email-signup input{
+    width:360px;
+    height:56px;
+    padding:0 18px;
+    background:rgba(22,22,22,.8);
+    color:#fff;
+    border:1px solid rgba(255,255,255,.4);
+    border-radius:4px;
+    outline:none;
+}
+
+.email-signup button{
+    background:#e50914;
+    color:#fff;
+    border:none;
+    height:56px;
+    padding:0 28px;
+    font-size:24px;
+    font-weight:600;
+    border-radius:4px;
+    cursor:pointer;
+}
+.email-signup input::placeholder{
+    color:#bbb;
+}
+
+.email-signup button:hover{
+    background:#c11119;
+}
+
+/* Features */
+
+.feature{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:80px 10%;
+    border-top:8px solid #222;
+    background:#000;
+}
+
+.feature:nth-child(even){
+    flex-direction:row-reverse;
+}
+
+.text{
+    flex-basis:48%;
+}
+
+.text h2{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.text p{
+    font-size:22px;
+    line-height:1.5;
+}
+
+.image{
+    flex-basis:48%;
+}
+
+.image img{
+    width:100%;
+    display:block;
+}
+
+/* FAQ */
+
+.faq{
+    width:78%;
+    max-width:1200px;
+    margin:80px auto;
+}
+
+.faq h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:25px;
+}
+
+.faq-item{
+    margin-bottom:8px;
+}
+
+.faq-question{
+    width:100%;
+    background:#2d2d2d;
+    color:#fff;
+    border:none;
+    padding:28px;
+    font-size:24px;
+    cursor:pointer;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    transition:.3s;
+}
+
+.faq-question:hover{
+    background:#414141;
+}
+
+.icon{
+    font-size:40px;
+}
+
+.faq-answer{
+    background:#2d2d2d;
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .35s ease;
+}
+
+.faq-answer p{
+    padding:28px;
+    font-size:18px;
+    line-height:1.5;
+}
+/* Footer */
+
+.footer{
+    width:80%;
+    max-width:1200px;
+    margin:90px auto 40px;
+    color:#b3b3b3;
+}
+
+.question{
+    margin-bottom:35px;
+    font-size:16px;
+}
+
+.question a{
+    color:#b3b3b3;
+}
+
+.footer-links{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px 60px;
+    margin-bottom:35px;
+}
+
+.footer-links a{
+    color:#b3b3b3;
+    font-size:14px;
+    text-decoration:underline;
+}
+
+.footer-links a:hover{
+    color:#fff;
+}
+
+.footer-lang{
+    width:130px;
+    margin-bottom:30px;
+}
+
+.country{
+    color:#999;
+    font-size:14px;
+}
+
+.copyright{
+    margin-top:20px;
+}
+
+/*reason*/
+
+.reasons{
+    width:82%;
+    max-width:1280px;
+    margin:70px auto;
+}
+.reason-box{
+    position:relative;
+    background:linear-gradient(145deg,#1b1835,#22183b,#301329);
+    border-radius:18px;
+    padding:26px;
+    min-height:320px;
+    overflow:hidden;
+    transition:.35s;
+}
+
+.reason-box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(0,0,0,.45);
+}
+
+.reason-box h3{
+    font-size:24px;
+    margin-bottom:16px;
+    font-weight:700;
+}
+
+.reason-box p{
+    color:#cfcfcf;
+    line-height:1.6;
+    font-size:16px;
+}
+
+.reason-icon{
+    position:absolute;
+    right:22px;
+    bottom:22px;
+    font-size:44px;
+    color:#ff5f96;
+}
+.reason-container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+/* Mobile Responsive */
+
+@media (max-width:768px){
+
+    nav{
+        padding:20px;
+    }
+
+    .logo{
+        width:120px;
+    }
+
+    .nav-right{
+        gap:8px;
+    }
+
+    .language-btn{
+        padding:6px 10px;
+    }
+
+    .language-btn select{
+        font-size:14px;
+    }
+
+
+    .hero-content h1{
+        font-size:32px;
+    }
+
+    .hero-content h3{
+        font-size:22px;
+    }
+
+    .hero-content p{
+        font-size:16px;
+    }
+
+    .email-signup{
+        max-width:560px;
+        gap:8px;
+    }
+
+    .email-signup input{
+        width:300px;
+        height:50px;
+        font-size:15px;
+    }
+
+    .email-signup button{
+        height:50px;
+        min-width:150px;
+        padding:0 18px;
+        font-size:18px;
+    }
+
+    .feature{
+        flex-direction:column;
+        text-align:center;
+        padding:50px 20px;
+    }
+
+    .text,
+    .image{
+        width:100%;
+    }
+
+    .text h2{
+        font-size:32px;
+    }
+
+    .text p{
+        font-size:18px;
+        line-height:28px;
+    }
+
+    .image img{
+        width:90%;
+        margin-top:20px;
+    }
+}
